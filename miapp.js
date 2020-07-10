@@ -11,7 +11,7 @@ textoElement.innerText = nombre;
 //elegir tipografia
 let tipografia = prompt("Elegí una tipografía: \n A. Serif \n B. San Serif");
 
-validacionTipografia(tipografia);
+//validacionTipografia(tipografia);
 
 //validacion simple, que no este vacio el prompt
 function validacionTipografia(variable) {
@@ -28,6 +28,7 @@ function validacionTipografia(variable) {
   return variable;
 }
 
+
 //eleccion tipografia segun respuesta
 if (tipografia.toLowerCase() == "a") {
   textoElement.classList.add("sans");
@@ -36,6 +37,10 @@ if (tipografia.toLowerCase() == "a") {
 } else {
   alert("No se eligió ninguna opción.");
 }
+
+
+
+
 //eleccion tematica: fondo imagen + color texto
 let tematica = prompt(
   "Elegí una temática: \n A. Marítima \n B. Bosque \n C. Oscuro"
