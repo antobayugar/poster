@@ -1,5 +1,3 @@
-debugger;
-
 //datos del nombre
 let nombre = prompt("Ingresá tu nombre:");
 let textoElement = document.getElementById('texto');
