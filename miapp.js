@@ -28,7 +28,6 @@ function validacionTipografia(variable) {
   return variable;
 }
 
-
 //eleccion tipografia segun respuesta
 if (tipografia.toLowerCase() == "a") {
   textoElement.classList.add("sans");
@@ -37,9 +36,6 @@ if (tipografia.toLowerCase() == "a") {
 } else {
   alert("No se eligió ninguna opción.");
 }
-
-
-
 
 //eleccion tematica: fondo imagen + color texto
 let tematica = prompt(
