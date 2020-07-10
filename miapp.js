@@ -11,7 +11,7 @@ textoElement.innerText = nombre;
 //elegir tipografia
 let tipografia = prompt("Elegí una tipografía: \n A. Serif \n B. San Serif");
 
-//validacionTipografia(tipografia);
+validacionTipografia(tipografia);
 
 //validacion simple, que no este vacio el prompt
 function validacionTipografia(variable) {
@@ -23,9 +23,9 @@ function validacionTipografia(variable) {
 }
 
 //eleccion tipografia segun respuesta
-if (tipografia == "B" || tipografia == "b") {
+if ((tipografia == "B") || (tipografia == "b")) {
     textoElement.classList.add("sans");
-} else {
+} else if ((tipografia == "A") || (tipografia == "a")) {
     textoElement.classList.add("serif");
 }
 
@@ -36,11 +36,11 @@ let bodyElement = document.getElementById('body');
 if ((tematica == "A") || (tematica == "a")) {
     bodyElement.classList.add('fondo-maritimo');
     textoElement.classList.add('texto-maritimo');
-} else 
-if((tematica == "B") || (tematica == "b")) {
-    bodyElement.classList.add('fondo-bosque');
-    textoElement.classList.add('texto-bosque');
-} else {
-    bodyElement.classList.add('fondo-oscuro');
-    textoElement.classList.add('texto-oscuro');
-} 
+} else
+    if ((tematica == "B") || (tematica == "b")) {
+        bodyElement.classList.add('fondo-bosque');
+        textoElement.classList.add('texto-bosque');
+    } else {
+        bodyElement.classList.add('fondo-oscuro');
+        textoElement.classList.add('texto-oscuro');
+    } 
