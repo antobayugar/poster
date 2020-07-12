@@ -8,40 +8,29 @@ while (nombre == "") {
 }
 textoElement.innerText = nombre;
 
+
 //elegir tipografia
-let tipografia = prompt("Elegí una tipografía: \n A. Serif \n B. San Serif");
-
-//validacionTipografia(tipografia);
-
-//validacion simple, que no este vacio el prompt
-function validacionTipografia(variable) {
-  while (
-    variable == "" ||
-    variable != "A" ||
-    variable != "a" ||
-    variable != "B" ||
-    variable != "b"
-  ) {
-    alert("La opción elegida no existe.");
-    variable = prompt("Elegí una tipografía: \n A. Serif \n B. San Serif");
-  }
-  return variable;
-}
-
+let tipografia ; 
 //eleccion tipografia segun respuesta
-if (tipografia.toLowerCase() == "a") {
-  textoElement.classList.add("sans");
-} else if (tipografia.toLowerCase() == "b") {
-  textoElement.classList.add("serif");
-} else {
-  alert("No se eligió ninguna opción.");
-}
+do {
+  tipografia = prompt("Elegí una tipografía: \n A. Serif \n B. San Serif");
+
+  if (tipografia.toLowerCase() == "a") {
+    textoElement.classList.add("sans");
+  } else if (tipografia.toLowerCase() == "b") {
+    textoElement.classList.add("serif");
+  } else {
+    alert("La opción elegida no existe.");
+  }
+} while ((tipografia == "") || (tipografia.toLowerCase() != "a") && (tipografia.toLowerCase() != "b"))
+
 
 //eleccion tematica: fondo imagen + color texto
-let tematica = prompt(
-  "Elegí una temática: \n A. Marítima \n B. Bosque \n C. Oscuro"
-);
+let tematica; 
 let bodyElement = document.getElementById("body");
+//eleccion tipografia segun respuesta
+do {
+  tematica  = prompt("Elegí una temática: \n A. Marítima \n B. Bosque \n C. Oscuro");
 
 if (tematica.toLowerCase() == "a") {
   bodyElement.classList.add("fondo-maritimo");
@@ -53,5 +42,6 @@ if (tematica.toLowerCase() == "a") {
   bodyElement.classList.add("fondo-oscuro");
   textoElement.classList.add("texto-oscuro");
 } else {
-  alert("No se eligió ninguna opción");
+  alert("La opción elegida no existe.");
 }
+} while ((tematica == "") || (tematica.toLowerCase() != "a") && (tematica.toLowerCase() != "b") && (tematica.toLowerCase() != "c"))
